@@ -5,3 +5,7 @@ node_modules
 *.md
 Dockerfile
 .dockerignore
+tests
+playwright-report
+test-results
+*.tsbuildinfo
