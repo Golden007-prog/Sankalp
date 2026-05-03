@@ -259,7 +259,8 @@ backend/
 │   ├── constituencies.json  ← 100 ACs with full historical data
 │   ├── electoral_roll.json  ← mock voter records (~5000)
 │   └── booths.json          ← polling booth metadata
-├── types/
+├── schemas/                  ← Pydantic v2 data contracts (renamed from `types/` to avoid stdlib collision)
+│   ├── electoral.py          ← Constituency, ElectionRecord, VoterRecord, Booth, …
 │   ├── session.py
 │   ├── forms.py
 │   └── agents.py

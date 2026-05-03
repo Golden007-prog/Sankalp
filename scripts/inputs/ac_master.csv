@@ -1,0 +1,101 @@
+ac_code,ac_name,ac_name_native,state,state_name,district,lok_sabha_code,lok_sabha_name,type,total_electors,male_electors,female_electors,total_booths,centroid_lat,centroid_lng
+KA-150,BTM Layout,ಬಿಟಿಎಂ ಲೇಔಟ್,KA,Karnataka,Bengaluru Urban,S10,Bangalore South,GEN,341208,177228,163949,289,12.9165,77.6101
+KA-151,Bommanahalli,ಬೊಮ್ಮನಹಳ್ಳಿ,KA,Karnataka,Bengaluru Urban,S10,Bangalore South,GEN,487523,254182,233311,412,12.9019,77.6206
+KA-152,Bengaluru South,ಬೆಂಗಳೂರು ದಕ್ಷಿಣ,KA,Karnataka,Bengaluru Urban,S10,Bangalore South,GEN,290154,150802,139321,247,12.9421,77.5739
+KA-153,Padmanabhanagar,ಪದ್ಮನಾಭನಗರ,KA,Karnataka,Bengaluru Urban,S10,Bangalore South,GEN,317009,164849,152128,269,12.9302,77.5620
+KA-149,Jayanagar,ಜಯನಗರ,KA,Karnataka,Bengaluru Urban,S10,Bangalore South,GEN,232471,118892,113548,198,12.9298,77.5831
+KA-148,Vijayanagar,ವಿಜಯನಗರ,KA,Karnataka,Bengaluru Urban,S10,Bangalore Central,GEN,261347,134987,126317,221,12.9719,77.5390
+KA-160,Mahalakshmi Layout,ಮಹಾಲಕ್ಷ್ಮಿ ಲೇಔಟ್,KA,Karnataka,Bengaluru Urban,S10,Bangalore Central,GEN,277820,143612,134168,235,13.0086,77.5495
+TN-029,Velachery,வேளச்சேரி,TN,Tamil Nadu,Chennai,S22,Chennai South,GEN,303544,151011,152492,257,12.9810,80.2206
+TN-018,Anna Nagar,அண்ணா நகர்,TN,Tamil Nadu,Chennai,S22,Chennai Central,GEN,234007,116003,117961,198,13.0850,80.2101
+TN-001,Gummidipoondi,கும்மிடிப்பூண்டி,TN,Tamil Nadu,Tiruvallur,S22,Tiruvallur,SC,236582,118881,117661,201,13.4097,80.1083
+TN-175,Thanjavur,தஞ்சாவூர்,TN,Tamil Nadu,Thanjavur,S22,Thanjavur,GEN,242100,121052,120998,205,10.7870,79.1378
+TN-227,Madurai East,மதுரை கிழக்கு,TN,Tamil Nadu,Madurai,S22,Madurai,GEN,260918,130212,130665,221,9.9252,78.1198
+TN-093,Coimbatore South,கோயம்புத்தூர் தெற்கு,TN,Tamil Nadu,Coimbatore,S22,Coimbatore,GEN,303200,150091,153069,257,11.0036,76.9617
+TN-235,Tirunelveli,திருநெல்வேலி,TN,Tamil Nadu,Tirunelveli,S22,Tirunelveli,GEN,229811,114329,115434,195,8.7139,77.7567
+WB-159,Bhabanipur,ভবানীপুর,WB,West Bengal,Kolkata,S25,Kolkata Dakshin,GEN,206418,108090,98259,175,22.5354,88.3502
+WB-160,Kolkata Port,কলকাতা পোর্ট,WB,West Bengal,Kolkata,S25,Kolkata Dakshin,GEN,229918,118102,111750,195,22.5601,88.3236
+WB-115,Asansol Dakshin,আসানসোল দক্ষিণ,WB,West Bengal,Paschim Bardhaman,S25,Asansol,GEN,288144,148228,139841,244,23.6847,86.9719
+WB-292,Singur,সিঙ্গুর,WB,West Bengal,Hooghly,S25,Hooghly,GEN,209822,107820,101947,178,22.8112,88.2278
+WB-273,Cooch Behar Uttar,কোচবিহার উত্তর,WB,West Bengal,Cooch Behar,S25,Cooch Behar,SC,243018,124920,118043,206,26.3210,89.4488
+WB-072,Krishnanagar Uttar,কৃষ্ণনগর উত্তর,WB,West Bengal,Nadia,S25,Krishnanagar,GEN,213204,109712,103443,181,23.4079,88.5022
+WB-289,Diamond Harbour,ডায়মন্ড হারবার,WB,West Bengal,South 24 Parganas,S25,Diamond Harbour,GEN,247118,127229,119831,210,22.1887,88.1907
+MH-184,Mumbai Bandra West,मुंबई बांद्रा पश्चिम,MH,Maharashtra,Mumbai Suburban,S13,Mumbai North Central,GEN,257301,135902,121359,218,19.0596,72.8295
+MH-176,Worli,वरळी,MH,Maharashtra,Mumbai City,S13,Mumbai South,GEN,267218,143982,123201,226,19.0176,72.8170
+MH-189,Versova,वर्सोवा,MH,Maharashtra,Mumbai Suburban,S13,Mumbai North Central,GEN,274509,144381,130083,232,19.1372,72.8126
+MH-220,Chembur,चेंबूर,MH,Maharashtra,Mumbai Suburban,S13,Mumbai North East,GEN,261087,138129,122896,221,19.0551,72.9008
+MH-156,Pune Cantonment,पुणे कॅन्टोनमेंट,MH,Maharashtra,Pune,S13,Pune,SC,272198,141100,130991,231,18.5018,73.8869
+MH-260,Nagpur South West,नागपूर दक्षिण पश्चिम,MH,Maharashtra,Nagpur,S13,Nagpur,GEN,393129,201902,191118,333,21.1241,79.0638
+MH-072,Jalgaon City,जळगाव शहर,MH,Maharashtra,Jalgaon,S13,Jalgaon,GEN,229021,118912,110034,194,21.0078,75.5630
+MH-211,Aurangabad West,औरंगाबाद पश्चिम,MH,Maharashtra,Aurangabad,S13,Aurangabad,SC,259918,134820,125012,220,19.8769,75.3392
+MH-228,Latur Rural,लातूर ग्रामीण,MH,Maharashtra,Latur,S13,Latur,GEN,287139,148228,138828,243,18.4087,76.5604
+UP-173,Lucknow Central,लखनऊ मध्य,UP,Uttar Pradesh,Lucknow,S24,Lucknow,GEN,372214,196228,175892,315,26.8467,80.9462
+UP-174,Lucknow East,लखनऊ पूर्व,UP,Uttar Pradesh,Lucknow,S24,Lucknow,GEN,464007,242871,221038,393,26.8762,80.9938
+UP-175,Lucknow West,लखनऊ पश्चिम,UP,Uttar Pradesh,Lucknow,S24,Lucknow,GEN,438119,229811,208211,371,26.8540,80.9145
+UP-128,Sahibabad,साहिबाबाद,UP,Uttar Pradesh,Ghaziabad,S24,Ghaziabad,GEN,927120,496229,430781,786,28.6818,77.3591
+UP-329,Varanasi South,वाराणसी दक्षिण,UP,Uttar Pradesh,Varanasi,S24,Varanasi,GEN,304118,160001,144028,257,25.3072,82.9750
+UP-019,Bijnor,बिजनौर,UP,Uttar Pradesh,Bijnor,S24,Bijnor,GEN,318211,168204,150004,269,29.3725,78.1336
+UP-279,Ayodhya,अयोध्या,UP,Uttar Pradesh,Faizabad,S24,Faizabad,GEN,378811,198121,180690,321,26.7990,82.2042
+UP-148,Bareilly,बरेली,UP,Uttar Pradesh,Bareilly,S24,Bareilly,GEN,366721,193902,172819,311,28.3670,79.4304
+UP-247,Mainpuri,मैनपुरी,UP,Uttar Pradesh,Mainpuri,S24,Mainpuri,GEN,316829,167829,149000,268,27.2348,79.0270
+BR-180,Patna Sahib,पटना साहिब,BR,Bihar,Patna,S04,Patna Sahib,GEN,361218,191920,169297,306,25.6093,85.1235
+BR-181,Bankipur,बांकीपुर,BR,Bihar,Patna,S04,Patna Sahib,GEN,288244,153128,135115,244,25.6128,85.1320
+BR-194,Buxar,बक्सर,BR,Bihar,Buxar,S04,Buxar,GEN,267129,141820,125308,226,25.5663,83.9778
+BR-127,Sasaram,सासाराम,BR,Bihar,Rohtas,S04,Sasaram,SC,310712,165091,145620,263,24.9484,84.0286
+BR-138,Gaya Town,गया टाउन,BR,Bihar,Gaya,S04,Gaya,GEN,283114,150228,132885,240,24.7914,85.0002
+TG-064,Goshamahal,గోషామహల్,TG,Telangana,Hyderabad,S29,Hyderabad,GEN,251909,135829,116079,213,17.3713,78.4561
+TG-065,Charminar,చార్మినార్,TG,Telangana,Hyderabad,S29,Hyderabad,GEN,283711,151221,132489,240,17.3616,78.4747
+TG-051,Khairatabad,ఖైరతాబాద్,TG,Telangana,Hyderabad,S29,Secunderabad,GEN,388442,202181,186260,329,17.4148,78.4615
+TG-088,Karimnagar,కరీంనగర్,TG,Telangana,Karimnagar,S29,Karimnagar,GEN,239001,124029,114971,202,18.4386,79.1288
+AP-001,Ichchapuram,ఇచ్ఛాపురం,AP,Andhra Pradesh,Srikakulam,S01,Srikakulam,GEN,228214,114502,113711,193,19.1086,84.6989
+AP-100,Tirupati,తిరుపతి,AP,Andhra Pradesh,Tirupati,S01,Tirupati,SC,261901,131821,130079,222,13.6288,79.4192
+AP-035,Visakhapatnam South,విశాఖపట్నం దక్షిణ,AP,Andhra Pradesh,Visakhapatnam,S01,Visakhapatnam,GEN,247218,124511,122706,210,17.7037,83.2978
+AP-148,Vijayawada Central,విజయవాడ సెంట్రల్,AP,Andhra Pradesh,Krishna,S01,Vijayawada,GEN,213889,108728,105160,181,16.5193,80.6305
+GJ-039,Maninagar,મણિનગર,GJ,Gujarat,Ahmedabad,S06,Ahmedabad East,GEN,329028,170902,158124,279,23.0046,72.6027
+GJ-029,Surat West,સુરત પશ્ચિમ,GJ,Gujarat,Surat,S06,Surat,GEN,302211,159211,143000,256,21.1936,72.7942
+GJ-046,Vadodara Sayajigunj,વડોદરા સયાજીગંજ,GJ,Gujarat,Vadodara,S06,Vadodara,GEN,288014,150228,137786,244,22.3061,73.1770
+GJ-118,Bhuj,ભુજ,GJ,Gujarat,Kachchh,S06,Kachchh,GEN,236118,123128,112989,200,23.2540,69.6669
+RJ-013,Sikar,सीकर,RJ,Rajasthan,Sikar,S20,Sikar,GEN,267841,141928,125913,227,27.6094,75.1399
+RJ-070,Hawa Mahal,हवा महल,RJ,Rajasthan,Jaipur,S20,Jaipur,GEN,253018,134101,118917,214,26.9239,75.8267
+RJ-159,Udaipur,उदयपुर,RJ,Rajasthan,Udaipur,S20,Udaipur,GEN,294112,154120,139992,249,24.5854,73.7125
+RJ-001,Ganganagar,श्रीगंगानगर,RJ,Rajasthan,Sri Ganganagar,S20,Sri Ganganagar,SC,259917,135811,124106,220,29.9194,73.8800
+MP-152,Bhopal Madhya,भोपाल मध्य,MP,Madhya Pradesh,Bhopal,S12,Bhopal,GEN,260118,136902,123216,220,23.2599,77.4126
+MP-006,Gwalior,ग्वालियर,MP,Madhya Pradesh,Gwalior,S12,Gwalior,GEN,287819,151001,136818,244,26.2183,78.1828
+MP-112,Indore-1,इंदौर-1,MP,Madhya Pradesh,Indore,S12,Indore,GEN,302118,158211,143907,256,22.7196,75.8577
+MP-068,Sagar,सागर,MP,Madhya Pradesh,Sagar,S12,Sagar,GEN,254028,134129,119899,215,23.8388,78.7378
+KL-061,Thiruvananthapuram,തിരുവനന്തപുരം,KL,Kerala,Thiruvananthapuram,S11,Thiruvananthapuram,GEN,213101,103120,109981,181,8.5241,76.9366
+KL-094,Ernakulam,എറണാകുളം,KL,Kerala,Ernakulam,S11,Ernakulam,GEN,228144,111890,116254,193,9.9816,76.2999
+KL-127,Kozhikode North,കോഴിക്കോട് വടക്ക്,KL,Kerala,Kozhikode,S11,Kozhikode,GEN,242118,118210,123908,205,11.2588,75.7804
+OR-110,Bhubaneswar Central,ଭୁବନେଶ୍ୱର କେନ୍ଦ୍ର,OR,Odisha,Khordha,S18,Bhubaneswar,GEN,229018,118821,110197,194,20.2733,85.8348
+OR-077,Puri,ପୁରୀ,OR,Odisha,Puri,S18,Puri,GEN,234119,121028,113091,198,19.8135,85.8312
+OR-130,Berhampur,ବ୍ରହ୍ମପୁର,OR,Odisha,Ganjam,S18,Berhampur,GEN,247919,127211,120708,210,19.3149,84.7941
+PB-066,Amritsar Central,ਅੰਮ੍ਰਿਤਸਰ ਕੇਂਦਰੀ,PB,Punjab,Amritsar,S19,Amritsar,GEN,213021,111120,101901,181,31.6340,74.8723
+PB-094,Ludhiana East,ਲੁਧਿਆਣਾ ਪੂਰਬੀ,PB,Punjab,Ludhiana,S19,Ludhiana,GEN,234118,123128,110990,198,30.9091,75.8579
+PB-038,Jalandhar Cantt,ਜਲੰਧਰ ਛਾਉਣੀ,PB,Punjab,Jalandhar,S19,Jalandhar,SC,267019,140921,126098,226,31.3203,75.5762
+HR-061,Karnal,करनाल,HR,Haryana,Karnal,S07,Karnal,GEN,228118,121028,107090,193,29.6857,76.9905
+HR-088,Faridabad NIT,फरीदाबाद एनआईटी,HR,Haryana,Faridabad,S07,Faridabad,GEN,309018,165002,144016,262,28.4089,77.3178
+HR-046,Gurgaon,गुड़गांव,HR,Haryana,Gurugram,S07,Gurgaon,GEN,485111,260229,224882,411,28.4595,77.0266
+DL-040,New Delhi,नई दिल्ली,DL,Delhi,New Delhi,S26,New Delhi,GEN,144818,76011,68807,123,28.6139,77.2090
+DL-046,RK Puram,आर के पुरम,DL,Delhi,South Delhi,S26,South Delhi,GEN,167029,87990,79039,142,28.5631,77.1853
+DL-055,Karol Bagh,करोल बाग,DL,Delhi,Central Delhi,S26,Chandni Chowk,SC,158211,84020,74191,134,28.6517,77.1909
+DL-064,Greater Kailash,ग्रेटर कैलाश,DL,Delhi,South Delhi,S26,South Delhi,GEN,178921,93290,85631,152,28.5435,77.2426
+JH-064,Jamshedpur East,जमशेदपुर पूर्व,JH,Jharkhand,East Singhbhum,S27,Jamshedpur,GEN,303011,159220,143791,257,22.7896,86.1990
+JH-007,Ranchi,राँची,JH,Jharkhand,Ranchi,S27,Ranchi,GEN,332128,174002,158126,281,23.3441,85.3096
+JH-068,Saraikela,सरायकेला,JH,Jharkhand,Seraikela-Kharsawan,S27,Singhbhum,ST,219112,113029,106083,186,22.7042,85.9379
+CG-074,Raipur City North,रायपुर शहर उत्तर,CG,Chhattisgarh,Raipur,S26,Raipur,GEN,242118,127918,114200,205,21.2514,81.6296
+CG-091,Bastar,बस्तर,CG,Chhattisgarh,Bastar,S26,Bastar,ST,201018,103021,97997,170,19.0760,82.0181
+AS-009,Dispur,দিছপুৰ,AS,Assam,Kamrup Metropolitan,S03,Gauhati,GEN,288011,150218,137793,244,26.1425,91.7874
+AS-079,Silchar,চিলচৰ,AS,Assam,Cachar,S03,Silchar,GEN,234128,121902,112226,198,24.8333,92.7789
+AS-100,Karimganj North,কৰিমগঞ্জ উত্তৰ,AS,Assam,Karimganj,S03,Karimganj,GEN,221019,114802,106217,187,24.8617,92.3635
+UK-001,Dehradun Cantt,देहरादून कैंट,UK,Uttarakhand,Dehradun,S28,Tehri Garhwal,GEN,118018,62019,55999,100,30.3165,78.0322
+UK-046,Haridwar,हरिद्वार,UK,Uttarakhand,Haridwar,S28,Haridwar,GEN,189011,99811,89200,160,29.9457,78.1642
+HP-052,Shimla,शिमला,HP,Himachal Pradesh,Shimla,S08,Shimla,GEN,67018,35201,31817,57,31.1048,77.1734
+HP-028,Manali,मनाली,HP,Himachal Pradesh,Kullu,S08,Mandi,GEN,77819,40892,36927,66,32.2432,77.1892
+JK-051,Srinagar,سرینگر,JK,Jammu and Kashmir,Srinagar,S30,Srinagar,GEN,143019,76002,67017,121,34.0837,74.7973
+JK-080,Jammu South,जम्मू दक्षिण,JK,Jammu and Kashmir,Jammu,S30,Jammu,GEN,179812,94229,85583,153,32.7266,74.8570
+GA-019,Panaji,पणजी,GA,Goa,North Goa,S05,North Goa,GEN,28019,14201,13818,24,15.4909,73.8278
+TR-008,Town Bardowali,টাউন বরদৌলী,TR,Tripura,West Tripura,S23,Tripura West,GEN,42018,21889,20129,36,23.8315,91.2868
+SK-007,Gangtok,གང་ཏོག,SK,Sikkim,East Sikkim,S21,Sikkim,GEN,21118,11029,10089,18,27.3389,88.6065
+MN-014,Imphal East-1,ইম্ফল ইস্ট-১,MN,Manipur,Imphal East,S14,Inner Manipur,GEN,29911,15602,14309,25,24.8170,93.9368
+PY-006,Puducherry-South,புதுச்சேரி-தெற்கு,PY,Puducherry,Puducherry,S22,Puducherry,GEN,40198,20312,19886,34,11.9416,79.8083
+CH-001,Chandigarh,ਚੰਡੀਗੜ੍ਹ,CH,Chandigarh,Chandigarh,S07,Chandigarh,GEN,633018,335020,297998,536,30.7333,76.7794
