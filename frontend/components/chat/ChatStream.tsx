@@ -160,10 +160,9 @@ export function ChatStream() {
     [state.sessionId, lang, t],
   );
 
-  const handleCamera = React.useCallback((epic: string | null, _raw: string) => {
-    if (!epic) return;
-    void send(`Verify EPIC ${epic}`);
-  }, [send]);
+  // Phase 5: Composer now owns the EpicCamera tray and emits a fully-
+  // formed verify message via onSubmit, so ChatStream no longer needs a
+  // separate camera handler.
 
   return (
     <div className="flex h-[calc(100vh-4rem)] flex-col gap-3 px-4 py-4">
@@ -210,7 +209,6 @@ export function ChatStream() {
       </div>
       <Composer
         onSubmit={send}
-        onCameraResult={handleCamera}
         sessionId={state.sessionId}
         disabled={state.busy}
       />

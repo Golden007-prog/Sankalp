@@ -183,6 +183,40 @@ async def stream_chat(
     parsed = _parse_markers(full_text)
     latency_ms = _ms_since(started)
 
+    # Phase 5: write durable state from the structured markers so the next
+    # turn's orchestrator + RegistrationAgent see the user's verified record
+    # (Form 8 flow can short-circuit re-asking for EPIC/AC).
+    state_delta: dict[str, Any] = {}
+    if (vr := parsed.get("voter_record")):
+        state_delta["last_voter_record"] = {
+            "epic_number": vr.get("epic", ""),
+            "name": vr.get("name", ""),
+            "ac_code": vr.get("ac", ""),
+            "booth_id": vr.get("booth"),
+        }
+    if (bc := parsed.get("booth_card")):
+        state_delta["last_booth"] = {
+            "booth_id": bc.get("booth_id", ""),
+            "name": bc.get("booth_id", ""),  # marker doesn't carry name yet; placeholder
+            "address": bc.get("address", ""),
+            "lat": float(bc.get("lat", 0) or 0),
+            "lng": float(bc.get("lng", 0) or 0),
+        }
+    if (st := parsed.get("story")):
+        state_delta["last_story"] = {
+            "ac_code": st.get("ac_code", ""),
+            "permalink": st.get("permalink"),
+            "cover_url": st.get("cover_url"),
+            "audio_url": st.get("audio_url"),
+        }
+    if last_intent:
+        state_delta["last_intent"] = last_intent
+    if state_delta:
+        try:
+            update_session(sid, state_delta)
+        except Exception:
+            log.exception("post-final session update failed")
+
     yield _ev("final", {
         "ok": True,
         "session_id": sid,

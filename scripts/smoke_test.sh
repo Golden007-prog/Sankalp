@@ -69,4 +69,18 @@ if ! echo "$final_data" | grep -q '"ok":[[:space:]]*true'; then
 fi
 ok "final ok=true"
 
+step "/api/vision/epic"
+SAMPLE="${SCRIPT_DIR:-$(cd "$(dirname "$0")"; pwd)}/../samples/epics/riya.jpg"
+if [ -f "$SAMPLE" ]; then
+  VISION_BODY="$(curl --fail --silent --show-error --max-time 60 \
+    -X POST "${BACKEND_URL}/api/vision/epic" \
+    -F "file=@${SAMPLE}")"
+  echo "    $VISION_BODY"
+  echo "$VISION_BODY" | grep -qi '"epic_number"[[:space:]]*:[[:space:]]*"ABC1234567"' \
+    || fail "OCR did not return ABC1234567 for samples/epics/riya.jpg"
+  ok "OCR parsed Riya's sample EPIC"
+else
+  printf "    skip (no samples/epics/riya.jpg)\n"
+fi
+
 printf "\nsmoke test passed against %s\n" "$BACKEND_URL"
