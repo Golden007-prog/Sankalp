@@ -8,3 +8,7 @@ tests/
 *.md
 .env
 .env.*
+
+# Runtime artefact dirs (generated locally; never bundled in the image)
+data/_pdfs/
+data/_stories/
