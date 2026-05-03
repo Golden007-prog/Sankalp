@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+dist/
+build/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+.pnpm-store/
+.turbo/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Env / secrets
+.env
+.env.local
+.env.*.local
+.env.production
+*.pem
+*.key
+service-account*.json
+gcp-key*.json
+
+# Local Claude state (kept private to dev machine)
+.claude/
+.mcp.json
+
+# Build artefacts
+*.log
+coverage/
+.coverage
+htmlcov/
+
+# Cloud Run / GCP
+.gcloud/
