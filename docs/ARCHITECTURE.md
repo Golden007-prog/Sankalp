@@ -56,7 +56,7 @@ Three constraints drove the architecture.
 
 **Cost discipline.** ADK's AgentTool pattern lets us use Gemini 2.5 Flash for routing and four of five specialists. Only StoryAgent needs Pro. This keeps a full demo session under $0.50 of Vertex AI spend.
 
-**Demo reliability.** Cold starts kill demos. Cloud Run with min-instances=1 on backend, min-instances=0 on frontend (Next.js cold-starts gracefully). Single region (asia-south1) avoids cross-region latency on Maps and Firestore.
+**Demo reliability.** Cold starts kill demos. Cloud Run with min-instances=1 on backend, min-instances=0 on frontend (Next.js cold-starts gracefully). Cloud Run *service* region is asia-south1 for low-latency Maps and Firestore reads. **Vertex AI LLM calls route to us-central1**: gemini-2.5-pro (StoryAgent) is not yet provisioned in asia-south1, so we use us-central1 for all Gemini calls. The ~150 ms LLM round-trip overhead is invisible during streaming SSE output. `GOOGLE_CLOUD_LOCATION` controls this — see `backend/.env.example` and DEPLOYMENT.md §4.3.
 
 ## 3. The agent topology
 

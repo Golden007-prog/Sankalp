@@ -13,8 +13,19 @@ from .electoral import (
     Gender,
     LanguageCode,
     Provenance,
+    SeatType,
     StateCode,
     VoterRecord,
+)
+from .session import (
+    BoothPreview,
+    ChangeType,
+    FormState,
+    Intent,
+    OcrResult,
+    SessionState,
+    StoryPreview,
+    VoterRecordPreview,
 )
 
 __all__ = [
@@ -22,14 +33,23 @@ __all__ = [
     "AcCode",
     "Address",
     "Booth",
+    "BoothPreview",
+    "ChangeType",
     "Constituency",
     "Demographics",
     "DemoPersona",
     "ElectionRecord",
     "EpicNumber",
+    "FormState",
     "Gender",
+    "Intent",
     "LanguageCode",
+    "OcrResult",
     "Provenance",
+    "SeatType",
+    "SessionState",
     "StateCode",
+    "StoryPreview",
     "VoterRecord",
+    "VoterRecordPreview",
 ]

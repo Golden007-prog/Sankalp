@@ -200,11 +200,14 @@ gcloud run deploy sankalp-backend \
   --set-env-vars="\
 GOOGLE_GENAI_USE_VERTEXAI=true,\
 GOOGLE_CLOUD_PROJECT=$PROJECT_ID,\
-GOOGLE_CLOUD_LOCATION=$REGION,\
+GOOGLE_CLOUD_LOCATION=us-central1,\
 FIRESTORE_PROJECT_ID=$PROJECT_ID,\
 STORAGE_BUCKET=sankalp-assets-$PROJECT_ID,\
 LOG_LEVEL=INFO,\
 ENVIRONMENT=production" \
+  # Note: GOOGLE_CLOUD_LOCATION drives only the Vertex AI LLM region.
+  # The Cloud Run service runs in $REGION (asia-south1). gemini-2.5-pro is
+  # not yet provisioned in asia-south1, so LLM calls go to us-central1.
   --set-secrets="\
 GOOGLE_MAPS_API_KEY=GOOGLE_MAPS_API_KEY:latest"
 ```

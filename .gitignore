@@ -47,5 +47,9 @@ coverage/
 .coverage
 htmlcov/
 
+# Generated PDFs / stories (local fallback when STORAGE_BUCKET unset)
+backend/data/_pdfs/
+backend/data/_stories/
+
 # Cloud Run / GCP
 .gcloud/

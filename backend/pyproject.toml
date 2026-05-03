@@ -2,8 +2,13 @@
 testpaths = ["tests"]
 asyncio_mode = "auto"
 asyncio_default_fixture_loop_scope = "function"
+addopts = "-m 'not live'"
+markers = [
+  "live: hits real Vertex AI / Gemini — opt in via `pytest -m live`",
+]
 filterwarnings = [
   "ignore::DeprecationWarning:pydantic.*",
+  "ignore::DeprecationWarning:google.*",
 ]
 
 [tool.ruff]

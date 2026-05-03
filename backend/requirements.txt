@@ -1,6 +1,19 @@
-fastapi==0.115.6
-uvicorn[standard]==0.32.1
-pydantic==2.10.4
+fastapi==0.136.1
+uvicorn[standard]==0.46.0
+pydantic==2.13.3
 faker==33.3.0
 pytest==8.3.4
 pytest-asyncio==0.25.2
+
+# Phase 2 — Google ADK + Vertex AI
+google-adk==1.32.0
+google-genai==1.74.0
+google-cloud-firestore==2.21.0
+google-cloud-storage==3.10.1
+google-cloud-vision==3.10.2
+google-cloud-texttospeech==2.27.0
+googlemaps==4.10.0
+reportlab==4.4.4
+pypdf==6.4.0
+httpx==0.28.1
+sse-starlette==3.4.1
