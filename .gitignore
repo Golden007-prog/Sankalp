@@ -51,5 +51,11 @@ htmlcov/
 backend/data/_pdfs/
 backend/data/_stories/
 
+# Generated samples (large; regenerate via scripts/iterate_narratives.py)
+samples/story_iterations/
+
+# Local-only secrets (admin key file written by Phase 6 deploy)
+.admin-key
+
 # Cloud Run / GCP
 .gcloud/

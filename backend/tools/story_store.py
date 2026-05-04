@@ -31,15 +31,28 @@ def store_story(session_id: str, ac_code: str, narrative: str, cover_url: str = 
         "created_at": datetime.now(timezone.utc).isoformat(),
     }
     bucket = os.environ.get("STORAGE_BUCKET")
+    public_base = os.environ.get("SANKALP_PUBLIC_FRONTEND_URL")
     filename = f"{ac_code}.json"
     if bucket:
         try:
             from google.cloud import storage  # noqa: WPS433
             client = storage.Client()
             blob = client.bucket(bucket).blob(f"story/{filename}")
-            blob.upload_from_string(json.dumps(payload, ensure_ascii=False), content_type="application/json")
-            expires = datetime.now(timezone.utc) + timedelta(days=30)
-            permalink = blob.generate_signed_url(version="v4", expiration=expires, method="GET")
+            blob.upload_from_string(
+                json.dumps(payload, ensure_ascii=False),
+                content_type="application/json",
+            )
+            # Permalink is the frontend's /story/{ac_code} page when we
+            # know the public URL; otherwise fall back to a 7-day signed
+            # URL pointing directly at the JSON (Cloud Storage signed-URL
+            # cap is 7 days for v4 SigV4).
+            if public_base:
+                permalink = f"{public_base.rstrip('/')}/story/{ac_code}"
+            else:
+                expires = datetime.now(timezone.utc) + timedelta(days=7)
+                permalink = blob.generate_signed_url(
+                    version="v4", expiration=expires, method="GET",
+                )
             return ok(permalink=permalink, storage="cloud")
         except Exception as e:
             log.warning("story upload failed (%s); writing locally", e)

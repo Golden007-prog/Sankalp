@@ -16,8 +16,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from middleware.access_log import JsonAccessLogMiddleware
 from middleware.json_logging import install as install_json_logging
 from middleware.request_id import RequestIdMiddleware
+from routes.admin import router as admin_router
 from routes.chat import router as chat_router
+from routes.constituency import router as constituency_router
 from routes.health import router as health_router
+from routes.story import router as story_router
 from routes.vision import router as vision_router
 from routes.voice import router as voice_router
 from tools.data_source import get_data_source
@@ -75,6 +78,9 @@ app.include_router(health_router, prefix="/api")
 app.include_router(chat_router, prefix="/api")
 app.include_router(vision_router, prefix="/api")
 app.include_router(voice_router, prefix="/api")
+app.include_router(constituency_router, prefix="/api")
+app.include_router(story_router, prefix="/api")
+app.include_router(admin_router, prefix="/api")
 
 
 @app.get("/")
