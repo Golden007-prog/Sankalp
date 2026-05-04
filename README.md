@@ -75,7 +75,7 @@ Three design choices drive everything else.
 | Backend | Python 3.11, FastAPI, SSE streaming | Same pattern as Bruhworking, ships fast |
 | Agents | Google ADK 0.4+, AgentTool pattern | Native tool routing, low-friction Cloud Run deploy |
 | LLMs | Gemini 2.5 Flash (routing), Gemini 2.5 Pro (story) | Flash for cost discipline, Pro only when narrative quality matters |
-| Voice | Gemini Live API | Native multilingual, no separate STT/TTS pipeline |
+| Voice | Web Speech API (push-to-talk) | Browser-native STT, free, sub-second latency; PRD §6 documented fallback for Gemini Live (which is the v2 distribution play) |
 | OCR | Cloud Vision API | Robust on noisy phone-camera EPIC scans |
 | Storage | Firestore (sessions), Cloud Storage (story assets) | Serverless, free tier covers demo |
 | Maps | Google Maps Platform (Places, Directions) | Booth location + accessibility metadata |
@@ -135,16 +135,31 @@ Full setup, env vars, and Cloud Run deploy in [`docs/DEPLOYMENT.md`](docs/DEPLOY
 ## Demo
 
 - **Frontend (chat UI):** https://sankalp-frontend-93037232246.asia-south1.run.app
-- **Backend (FastAPI):** https://sankalp-backend-93037232246.asia-south1.run.app · `/api/healthz` returns `{"status":"ok",...}`
+- **Permalink example:** https://sankalp-frontend-93037232246.asia-south1.run.app/story/KA-151
+- **Backend (FastAPI):** https://sankalp-backend-93037232246.asia-south1.run.app · `/api/healthz` returns `{"status":"ok","version":"1.0.0",…}`
 
-Phase 0 ships a Hello-World scaffold; the four agents land in Phase 2 and the full chat UI in Phase 4.
+Demo script (90 seconds):
+1. Riya opens the app, picks Kannada (or any of the 7 launch languages).
+2. Voice or text: *"naanu first time voter, register maaDbEku"* → OrchestratorAgent routes to RegistrationAgent which collects Form 6 fields conversationally in Kannada.
+3. RegistrationAgent generates a pre-filled Form 6 PDF; the chat surfaces a download card with a QR to voters.eci.gov.in.
+4. Riya taps the camera icon, photographs her old EPIC card → Cloud Vision OCR (multi-strategy) parses `ABC1234567` → auto-routes to VerificationAgent which renders her voter record.
+5. "Where do I vote?" → BoothAgent surfaces a booth card with accessibility chips and Google Maps deeplink.
+6. "Why does my vote matter?" → StoryAgent (Gemini 2.5 Pro) writes a 200-word personalised narrative about Bommanahalli's 4,218-vote margin in 2023 — rendered with an Imagen 3 cover and a stylised React Three Fiber constituency scene. Share button copies a permalink at `/story/KA-151`.
 
-Demo script (90 seconds, post-Phase 6):
-1. Riya opens the app, picks Kannada
-2. Voice: *"naanu first time voter, register maaDbEku"* → RegistrationAgent collects fields conversationally
-3. Pre-filled Form 6 PDF generated
-4. Riya taps "Why does my vote matter?" → enters PIN 560029 → StoryAgent renders constituency story (margin: 8,453 votes in 2024)
-5. Tap "Where do I vote?" → BoothAgent shows booth on Maps with wheelchair flag
+## Phase log
+
+| Phase | Ship | Commit |
+|-------|------|--------|
+| 0 | Repo scaffold, GCP wiring, Hello-World deploy | `5542b44` |
+| 1 | Mock electoral data layer (100 ACs, 4,500 voters, 510 booths, 5 personas) | `db8b105` |
+| 2 | Five Google ADK agents + 12 tools, prompts byte-verbatim from `docs/AGENTS.md` | `cb40816` |
+| 3 | FastAPI backend with SSE streaming, structured logging, cost-log to Firestore | `3cadfb9` |
+| 4 | Next.js 14 chat UI, 7-language i18n, Web Speech voice, marker→component dispatch | `38c89dd` |
+| 5 | Multi-strategy OCR (DOCUMENT→TEXT fallback, regex+heuristics, dataset cross-check) + EpicCamera | `24b8005` |
+| 6 | StoryAgent prompt evolution + 5 Imagen covers + R3F constituency scene + permalink + cost endpoint | `c902e57` |
+| 7 | Polish, version bump v1.0.0, DoD walk, smoke green, tag pushed | this commit |
+
+Phase-cumulative LLM spend across the seven-day build: **≈ $0.50** (well under the $5 ceiling). Live test runs and 10-AC narrative sweeps logged in Firestore `cost_log`; aggregations available at `/api/admin/costs?key=…`.
 
 ## Evaluation rubric self-check
 
@@ -153,7 +168,7 @@ Demo script (90 seconds, post-Phase 6):
 | Code quality | Typed Pydantic contracts between agents, monorepo, single branch |
 | Security | No persistent PII, hashed session IDs, secrets in Secret Manager, no key in repo |
 | Efficiency | Flash routes, Pro narrates only on explicit request, Firestore TTLs, single region |
-| Testing | Smoke test script, agent unit tests, end-to-end Playwright on chat flow |
+| Testing | 84 hermetic backend tests + 23 frontend vitest + 4 live (`pytest -m live`) covering Vertex AI / Cloud Vision / SSE end-to-end |
 | Accessibility | Voice-first, 7 languages at launch, WCAG AA contrast, screen-reader labels |
 | Google services | Gemini, ADK, Cloud Run, Maps, Firestore, Vision OCR, Cloud Storage, Imagen — eight |
 

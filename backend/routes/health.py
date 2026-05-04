@@ -10,7 +10,7 @@ from typing import Any
 
 from fastapi import APIRouter
 
-VERSION = "0.3.0"
+VERSION = "1.0.0"
 SERVICE_NAME = "sankalp-backend"
 
 router = APIRouter(tags=["health"])
@@ -23,5 +23,5 @@ def healthz() -> dict[str, Any]:
         "service": SERVICE_NAME,
         "version": VERSION,
         "git_sha": os.environ.get("GIT_SHA", "dev"),
-        "phase": "3",
+        "phase": "7",
     }

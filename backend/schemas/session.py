@@ -85,7 +85,11 @@ class SessionState(BaseModel):
     session_id; expires_at drives the Firestore TTL. No real PII."""
 
     model_config = ConfigDict(extra="forbid")
-    session_id: str = Field(min_length=8)
+    # min_length=1 instead of 8 because the orchestrator's load_session
+    # tool sometimes synthesises "default" as a placeholder session_id
+    # (the LLM has no reliable way to know the real id); we let the bridge
+    # rewrite to the real token before persisting.
+    session_id: str = Field(min_length=1)
     language: LanguageCode = "en"
     last_intent: Optional[Intent] = None
     form_state: Optional[FormState] = None

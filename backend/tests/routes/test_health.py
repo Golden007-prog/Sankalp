@@ -13,5 +13,5 @@ def test_healthz_shape() -> None:
     body = r.json()
     assert body["status"] == "ok"
     assert body["service"] == "sankalp-backend"
-    assert body["phase"] == "3"
+    assert body["phase"] == "7"
     assert "X-Request-Id" in r.headers
